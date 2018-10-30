@@ -1,0 +1,19 @@
+matrix:
+  include:
+    - language: node_js
+      cache: npm
+      node_js:
+        - "8"
+      script:
+        # React/Node tests
+        - cd AutoRPG.Web/ClientApp
+        - npm install
+        - npm test
+    - language: csharp
+      solution: escape-to-earth.sln
+      mono: none
+      dotnet: 2.1.300
+      script:
+        # .NET Core tests
+        - dotnet test AutoRPG.Web.Tests/AutoRPG.Web.Tests.csproj
+        - dotnet test AutoRPG.Authentication.Tests/AutoRPG.Authentication.Tests.csproj

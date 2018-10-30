@@ -1,0 +1,7 @@
+node_modules
+.suo
+sqlite3
+bin
+obj
+[Dd]ebug
+[Rr]elease
