@@ -1,6 +1,4 @@
-﻿using AutoRpg.DatabaseMediator;
-using System;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 
 namespace AutoRpg.DatabaseMediator
 {

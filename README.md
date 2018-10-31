@@ -21,4 +21,4 @@ Also includes a standalone console you can use to view progress (and maybe in th
 
 # Development Notes
 
-To run all the ReactJS tests, run `npm test` from `AutoRPG.Web/ClientApp`.
+To run all the ReactJS tests, run `npm test` from `AutoRpg.Web/ClientApp`.

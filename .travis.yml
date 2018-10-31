@@ -6,7 +6,7 @@ matrix:
         - "8"
       script:
         # React/Node tests
-        - cd AutoRPG.Web/ClientApp
+        - cd AutoRpg.Web/ClientApp
         - npm install
         - npm test
     - language: csharp
