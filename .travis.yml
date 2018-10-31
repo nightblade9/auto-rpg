@@ -15,5 +15,5 @@ matrix:
       dotnet: 2.1.300
       script:
         # .NET Core tests
-        - dotnet test AutoRPG.Web.Tests/AutoRPG.Web.Tests.csproj
-        - dotnet test AutoRPG.Authentication.Tests/AutoRPG.Authentication.Tests.csproj
+        - dotnet test AutoRpg.Web.Tests/AutoRpg.Web.Tests.csproj
+        - dotnet test AutoRpg.Authentication.Tests/AutoRPG.Authentication.Tests.csproj
