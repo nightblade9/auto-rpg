@@ -14,6 +14,12 @@ namespace AutoRpg.DatabaseMediator
             this.connectionString = connectionStrings.DefaultConnection;
         }
 
+        public void Execute(string query, object parameters = null)
+        {
+            // Cheap short-cut: execute scalar but ignore result.
+            this.ExecuteScalar<object>(query, parameters);
+        }
+
         public T ExecuteScalar<T>(string query, object parameters = null)
         {
             if (parameters == null)
@@ -30,7 +36,7 @@ namespace AutoRpg.DatabaseMediator
                 command.CommandText = query;
 
                 var paramsType = parameters.GetType();
-                foreach (var field in paramsType.GetFields(System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public))
+                foreach (var field in paramsType.GetProperties())
                 {
                     var name = field.Name;
                     var value = field.GetValue(parameters);

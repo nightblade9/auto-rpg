@@ -6,7 +6,7 @@ namespace AutoRpg.Cryptographer
     {
         private static string GetRandomSalt()
         {
-            return BCrypt.Net.BCrypt.GenerateSalt(16);
+            return BCrypt.Net.BCrypt.GenerateSalt(12);
         }
 
         public static string HashPassword(string password)

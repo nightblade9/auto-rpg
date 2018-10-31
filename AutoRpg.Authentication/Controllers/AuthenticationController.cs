@@ -29,9 +29,9 @@ namespace AutoRpg.Authentication.Controllers
         /// Returns true if the user is authenticated; else, false.
         /// </summary>
         [HttpPost]
-        public ActionResult<bool> Post([FromBody]string emailAddress, [FromBody]string plaintextPassword)
+        public ActionResult<bool> Post(string emailAddress, string plaintextPassword)
         {
-            var userExists = databaseMediator.ExecuteScalar<int>("SELECT COUNT(*) FROM [Users] WHERE EmailAddress = @emailAddress", new { emailAddress = emailAddress }) == 1;
+            var userExists = databaseMediator.ExecuteScalar<int>("SELECT COUNT(*) FROM [Users] WHERE EmailAddress = @emailAddress", new { emailAddress = emailAddress }) >= 1;
 
             if (!userExists)
             {
