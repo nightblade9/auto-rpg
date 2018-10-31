@@ -16,4 +16,4 @@ matrix:
       script:
         # .NET Core tests
         - dotnet test AutoRpg.Web.Tests/AutoRpg.Web.Tests.csproj
-        - dotnet test AutoRpg.Authentication.Tests/AutoRPG.Authentication.Tests.csproj
+        - dotnet test AutoRpg.Authentication.Tests/AutoRpg.Authentication.Tests.csproj
