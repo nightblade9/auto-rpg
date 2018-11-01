@@ -3,6 +3,7 @@ using AutoRpg.DatabaseMediator;
 using AutoRpg.Authentication.Controllers;
 using Moq;
 using NUnit.Framework;
+using static AutoRpg.Authentication.Controllers.AuthenticationController;
 
 namespace AutoRpg.Authentication.Tests.Controllers
 {
@@ -20,7 +21,7 @@ namespace AutoRpg.Authentication.Tests.Controllers
 
             // Act
             var controller = new AuthenticationController(mediator.Object);
-            var actual = controller.Post("user name doesn't matter because of mocks", "ditto for password");
+            var actual = controller.Post(new CredentialsDto("user name doesn't matter because of mocks", "ditto for password"));
 
             // Assert
             Assert.That(actual.Value, Is.False);
@@ -42,7 +43,7 @@ namespace AutoRpg.Authentication.Tests.Controllers
 
             // Act
             var controller = new AuthenticationController(mediator.Object);
-            var actual = controller.Post("user name doesn't matter because of mocks", "wrong password");
+            var actual = controller.Post(new CredentialsDto("user name doesn't matter because of mocks", "wrong password"));
 
             // Assert
             Assert.That(actual.Value, Is.False);
@@ -64,7 +65,7 @@ namespace AutoRpg.Authentication.Tests.Controllers
 
             // Act
             var controller = new AuthenticationController(mediator.Object);
-            var actual = controller.Post("user name doesn't matter because of mocks", plaintextPassword);
+            var actual = controller.Post(new CredentialsDto("user name doesn't matter because of mocks", plaintextPassword));
 
             // Assert
             Assert.That(actual.Value, Is.True);

@@ -29,8 +29,11 @@ namespace AutoRpg.Authentication.Controllers
         /// Returns true if the user is authenticated; else, false.
         /// </summary>
         [HttpPost]
-        public ActionResult<bool> Post(string emailAddress, string plaintextPassword)
+        public ActionResult<bool> Post(CredentialsDto credentials)
         {
+            var emailAddress = credentials.EmailAddress;
+            var plaintextPassword = credentials.PlaintextPassword;
+
             var userExists = databaseMediator.ExecuteScalar<int>("SELECT COUNT(*) FROM [Users] WHERE EmailAddress = @emailAddress", new { emailAddress = emailAddress }) >= 1;
 
             if (!userExists)
@@ -61,5 +64,17 @@ namespace AutoRpg.Authentication.Controllers
         //public void Delete(int id)
         //{
         //}
+
+        public class CredentialsDto
+        {
+            public string EmailAddress { get; set; }
+            public string PlaintextPassword { get; set;  }
+
+            public CredentialsDto(string email, string password)
+            {
+                this.EmailAddress = email;
+                this.PlaintextPassword = password;
+            }
+        }
     }
 }
