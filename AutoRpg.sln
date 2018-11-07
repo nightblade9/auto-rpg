@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{9C884380-11D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserManagement", "UserManagement", "{B46C4BA3-38E1-4281-8A59-4234E97EB6A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRpg.UserManagement", "AutoRpg.UserManagement\AutoRpg.UserManagement.csproj", "{17ABC114-8A14-4F54-BAEF-E140A9322C34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRpg.UserManagement", "AutoRpg.UserManagement\AutoRpg.UserManagement.csproj", "{17ABC114-8A14-4F54-BAEF-E140A9322C34}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatabaseMigrations", "DatabaseMigrations", "{22356A09-438E-48E5-976D-594A523B3B67}"
 	ProjectSection(SolutionItems) = preProject

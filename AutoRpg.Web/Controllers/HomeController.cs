@@ -5,9 +5,13 @@ namespace AutoRpg.Web.Controllers
 {
     public class HomeController : Controller
     {
-        [Authorize]
-        // GET
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public IActionResult Protected()
         {
             return View();
         }

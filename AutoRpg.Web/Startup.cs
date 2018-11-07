@@ -1,10 +1,13 @@
+using AutoRpg.Web.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
@@ -16,7 +19,6 @@ namespace AutoRpg.Web
     {
         private const string GoogleAuthClientId = "GoogleAuthClientId";
         private const string GoogleAuthClientSecret = "GoogleAuthClientSecret";
-        private const string GoogleAuthAuthority = "https://accounts.google.com";
 
         public Startup(IConfiguration configuration)
         {
@@ -28,6 +30,17 @@ namespace AutoRpg.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // OIDC
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
+            services.AddAuthentication().AddGoogle(options =>
+            {
+                options.ClientId = Environment.GetEnvironmentVariable(GoogleAuthClientId);
+                options.ClientSecret = Environment.GetEnvironmentVariable(GoogleAuthClientSecret);
+            });
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // In production, the React files will be served from this directory
@@ -36,19 +49,7 @@ namespace AutoRpg.Web
                 configuration.RootPath = "ClientApp/build";
             });
 
-            //services.AddAuthentication().AddGoogle((options) =>
-            //{
-            //    options.ClientId = Environment.GetEnvironmentVariable(GoogleAuthClientId);
-            //    options.ClientSecret = Environment.GetEnvironmentVariable(GoogleAuthClientSecret);
-            //});
-
-            services.AddAuthentication().AddOpenIdConnect((options) => {
-                options.ClientId = Environment.GetEnvironmentVariable(GoogleAuthClientId);
-                options.ClientSecret = Environment.GetEnvironmentVariable(GoogleAuthClientSecret);
-                options.Authority = GoogleAuthAuthority;
-                options.ResponseType = OpenIdConnectResponseType.Code.ToString();
-                options.GetClaimsFromUserInfoEndpoint = true;
-            });
+            services.AddDbContext<ApplicationDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,15 +69,13 @@ namespace AutoRpg.Web
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
-            app.UseAuthentication();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
             });
-            
+
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = "ClientApp";
