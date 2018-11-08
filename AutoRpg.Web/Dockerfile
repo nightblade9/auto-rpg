@@ -1,20 +1,17 @@
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM microsoft/dotnet:sdk AS build-env
 WORKDIR /app
-EXPOSE 51529
-EXPOSE 44330
 
-FROM microsoft/dotnet:2.1-sdk AS build
-WORKDIR /src
-COPY ["AutoRpg.Web/AutoRpg.Web.csproj", "AutoRpg.Web/"]
-RUN dotnet restore "AutoRpg.Web/AutoRpg.Web.csproj"
-COPY . .
-WORKDIR "/src/AutoRpg.Web"
-RUN dotnet build "AutoRpg.Web.csproj" -c Release -o /app
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish "AutoRpg.Web.csproj" -c Release -o /app
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
 
-FROM base AS final
+# Build runtime image
+#FROM microsoft/dotnet:aspnetcore-runtime
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
 WORKDIR /app
-COPY --from=publish /app .
+COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "AutoRpg.Web.dll"]
