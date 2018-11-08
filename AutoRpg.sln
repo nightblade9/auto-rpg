@@ -3,17 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRpg.Authentication", "AutoRpg.Authentication\AutoRpg.Authentication.csproj", "{7D9B2183-B66D-414B-BD18-A48A4D43995B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{143CB80F-C822-40AA-9CCF-F029FFAC4508}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{C2908B45-2137-4F0F-9377-3457830DC800}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{2B325A8C-1E98-40E0-888F-4C19BAD233ED}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRpg.DatabaseMediator", "AutoRpg.DatabaseMediator\AutoRpg.DatabaseMediator.csproj", "{5674248C-126A-4B97-9E78-6C41A377DC57}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRpg.Authentication.Tests", "AutoRpg.Authentication.Tests\AutoRpg.Authentication.Tests.csproj", "{ED28DBD7-FF2D-4903-B7B2-E510DFD6970A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{9C884380-11D1-480C-B88C-3A8E99BB0E68}"
 EndProject
@@ -22,7 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatabaseMigrations", "Datab
 		001_CreateUsersTable.sql = 001_CreateUsersTable.sql
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRPG.Web", "AutoRPG.Web\AutoRPG.Web.csproj", "{C020B39D-4189-4ED7-99C0-FCC3A3593D79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRpg.Web", "AutoRPG.Web\AutoRpg.Web.csproj", "{C020B39D-4189-4ED7-99C0-FCC3A3593D79}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRpg.PartyService", "Microservices\AutoRpg.PartyService\AutoRpg.PartyService.csproj", "{9C05F26A-55BB-43B5-9BC6-87C30298E81B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,32 +26,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7D9B2183-B66D-414B-BD18-A48A4D43995B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D9B2183-B66D-414B-BD18-A48A4D43995B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D9B2183-B66D-414B-BD18-A48A4D43995B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D9B2183-B66D-414B-BD18-A48A4D43995B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5674248C-126A-4B97-9E78-6C41A377DC57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5674248C-126A-4B97-9E78-6C41A377DC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5674248C-126A-4B97-9E78-6C41A377DC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5674248C-126A-4B97-9E78-6C41A377DC57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ED28DBD7-FF2D-4903-B7B2-E510DFD6970A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED28DBD7-FF2D-4903-B7B2-E510DFD6970A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED28DBD7-FF2D-4903-B7B2-E510DFD6970A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED28DBD7-FF2D-4903-B7B2-E510DFD6970A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C020B39D-4189-4ED7-99C0-FCC3A3593D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C020B39D-4189-4ED7-99C0-FCC3A3593D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C020B39D-4189-4ED7-99C0-FCC3A3593D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C020B39D-4189-4ED7-99C0-FCC3A3593D79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C05F26A-55BB-43B5-9BC6-87C30298E81B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C05F26A-55BB-43B5-9BC6-87C30298E81B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C05F26A-55BB-43B5-9BC6-87C30298E81B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C05F26A-55BB-43B5-9BC6-87C30298E81B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{7D9B2183-B66D-414B-BD18-A48A4D43995B} = {2B325A8C-1E98-40E0-888F-4C19BAD233ED}
-		{2B325A8C-1E98-40E0-888F-4C19BAD233ED} = {C2908B45-2137-4F0F-9377-3457830DC800}
 		{5674248C-126A-4B97-9E78-6C41A377DC57} = {143CB80F-C822-40AA-9CCF-F029FFAC4508}
-		{ED28DBD7-FF2D-4903-B7B2-E510DFD6970A} = {2B325A8C-1E98-40E0-888F-4C19BAD233ED}
 		{C020B39D-4189-4ED7-99C0-FCC3A3593D79} = {9C884380-11D1-480C-B88C-3A8E99BB0E68}
+		{9C05F26A-55BB-43B5-9BC6-87C30298E81B} = {C2908B45-2137-4F0F-9377-3457830DC800}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B65F8DE8-B66B-496A-9491-BA5B075382AE}
