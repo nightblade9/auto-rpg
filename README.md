@@ -14,10 +14,12 @@ Also includes a standalone console you can use to view progress (and maybe in th
 
 - Choose which quests to accept and build rapport with different groups
 - Build your characters by selecting their equipment, and skills/stats as they level up
+- Explore and fight across a vast world full of ominous forests, dangerous caves, icy palaces, and more!
 - Recruit multiple party members of varying backgrounds and goals
 - Engage in epic battles against hordes of monsters
 - Fight massively powerful boss-beasts in battle after battle as you whittle them down
-- Monitor status regularly with an oldschool ASCII console app
+- Join guilds, share XP/gold/items, and engage in massive battles!
+- Monitor progress regularly with an oldschool ASCII console app
 
 # Game Workflows
 
@@ -27,7 +29,11 @@ Eventually, you unlock a place where you can recruit a second party member. Same
 
 Over time, you will unlock several party members, and manage which ones you want to use at any given time (say, four in party at once out of the 18 you have in your roster). 
 
-As more users join and play, *every party on the same floor fights at the same time.* So the more people join, the more we advance (toghether) because we fight together. All XP, loot, etc. is shared/cloned to everyone who participates, even if fleetingly.
+Once you join a guild, we run daily "guild runs" against a special dungeon with a powerful boss (who gives awesome/rare loot). All guild members fight toghether *at the same time*, using whatever shared pool of characters they decide to send; all XP, gold, and spoils are shared (cloned) across all participants.
+
+Also, guild members can send gold/XP/loot to each other, or pool it in a "guild pool" for anyone who wants to partake.
+
+Finally, you get basic items (leather jerkin, steel haubark, etc.) Upgrading items is done by equipping gems that give various perks (eg. +3 defense). These gems also have power levels, and/or earn XP and level up (power up) too.
 
 # Development Notes
 
