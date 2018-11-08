@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AutoRpg.Cryptographer\AutoRpg.Cryptographer.csproj" />
     <ProjectReference Include="..\AutoRpg.DatabaseMediator\AutoRpg.DatabaseMediator.csproj" />
   </ItemGroup>
 
