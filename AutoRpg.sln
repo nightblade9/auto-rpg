@@ -5,20 +5,11 @@ VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{143CB80F-C822-40AA-9CCF-F029FFAC4508}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{C2908B45-2137-4F0F-9377-3457830DC800}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRpg.DatabaseMediator", "AutoRpg.DatabaseMediator\AutoRpg.DatabaseMediator.csproj", "{5674248C-126A-4B97-9E78-6C41A377DC57}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{9C884380-11D1-480C-B88C-3A8E99BB0E68}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatabaseMigrations", "DatabaseMigrations", "{22356A09-438E-48E5-976D-594A523B3B67}"
-	ProjectSection(SolutionItems) = preProject
-		001_CreateUsersTable.sql = 001_CreateUsersTable.sql
-	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRpg.Web", "AutoRPG.Web\AutoRpg.Web.csproj", "{C020B39D-4189-4ED7-99C0-FCC3A3593D79}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRpg.PartyService", "Microservices\AutoRpg.PartyService\AutoRpg.PartyService.csproj", "{9C05F26A-55BB-43B5-9BC6-87C30298E81B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRpg.Web", "AutoRpg.Web\AutoRpg.Web.csproj", "{67B17D4B-BCC7-462E-877E-FB4431D8376E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,22 +21,17 @@ Global
 		{5674248C-126A-4B97-9E78-6C41A377DC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5674248C-126A-4B97-9E78-6C41A377DC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5674248C-126A-4B97-9E78-6C41A377DC57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C020B39D-4189-4ED7-99C0-FCC3A3593D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C020B39D-4189-4ED7-99C0-FCC3A3593D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C020B39D-4189-4ED7-99C0-FCC3A3593D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C020B39D-4189-4ED7-99C0-FCC3A3593D79}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C05F26A-55BB-43B5-9BC6-87C30298E81B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C05F26A-55BB-43B5-9BC6-87C30298E81B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C05F26A-55BB-43B5-9BC6-87C30298E81B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C05F26A-55BB-43B5-9BC6-87C30298E81B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B17D4B-BCC7-462E-877E-FB4431D8376E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B17D4B-BCC7-462E-877E-FB4431D8376E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B17D4B-BCC7-462E-877E-FB4431D8376E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B17D4B-BCC7-462E-877E-FB4431D8376E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5674248C-126A-4B97-9E78-6C41A377DC57} = {143CB80F-C822-40AA-9CCF-F029FFAC4508}
-		{C020B39D-4189-4ED7-99C0-FCC3A3593D79} = {9C884380-11D1-480C-B88C-3A8E99BB0E68}
-		{9C05F26A-55BB-43B5-9BC6-87C30298E81B} = {C2908B45-2137-4F0F-9377-3457830DC800}
+		{67B17D4B-BCC7-462E-877E-FB4431D8376E} = {9C884380-11D1-480C-B88C-3A8E99BB0E68}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B65F8DE8-B66B-496A-9491-BA5B075382AE}
