@@ -1,3 +1,0 @@
-build:
-  docker:
-    web: AutoRpg.Web/Dockerfile
