@@ -1,14 +1,14 @@
 matrix:
   include:
-    - language: node_js
-      cache: npm
-      node_js:
-        - "8"
-      script:
-        # React/Node tests
-        #- cd AutoRpg.Web/ClientApp
-        #- npm install
-        #- npm test
+    # - language: node_js
+    #   cache: npm
+    #   node_js:
+    #     - "8"
+    #   script:
+    #     # React/Node tests
+    #     - cd AutoRpg.Web/ClientApp
+    #     - npm install
+    #     - npm test
     - language: csharp
       solution: AutoRpg.sln
       mono: none
@@ -17,3 +17,4 @@ matrix:
         # .NET Core tests
         #- dotnet test AutoRpg.Web.Tests/AutoRpg.Web.Tests.csproj
         #- dotnet test AutoRpg.Authentication.Tests/AutoRpg.Authentication.Tests.csproj
+        dotnet build AutoRpg.sln
