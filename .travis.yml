@@ -6,14 +6,14 @@ matrix:
         - "8"
       script:
         # React/Node tests
-        - cd AutoRpg.Web/ClientApp
-        - npm install
-        - npm test
+        #- cd AutoRpg.Web/ClientApp
+        #- npm install
+        #- npm test
     - language: csharp
-      solution: escape-to-earth.sln
+      solution: AutoRpg.sln
       mono: none
       dotnet: 2.1.300
       script:
         # .NET Core tests
-        - dotnet test AutoRpg.Web.Tests/AutoRpg.Web.Tests.csproj
-        - dotnet test AutoRpg.Authentication.Tests/AutoRpg.Authentication.Tests.csproj
+        #- dotnet test AutoRpg.Web.Tests/AutoRpg.Web.Tests.csproj
+        #- dotnet test AutoRpg.Authentication.Tests/AutoRpg.Authentication.Tests.csproj
