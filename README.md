@@ -12,14 +12,14 @@ Also includes a standalone console you can use to view progress (and maybe in th
 
 # Major Features
 
-- Choose which quests to accept and build rapport with different groups
-- Build your characters by selecting their equipment, and skills/stats as they level up
 - Explore and fight across a vast world full of ominous forests, dangerous caves, icy palaces, and more!
+- Build your characters by selecting their equipment, and skills/stats as they level up
+- Choose which quests to accept and build rapport with different groups
 - Recruit multiple party members of varying backgrounds and goals
 - Engage in epic battles against hordes of monsters
 - Fight massively powerful boss-beasts in battle after battle as you whittle them down
 - Join guilds, share XP/gold/items, and engage in massive battles!
-- Monitor progress regularly with an oldschool ASCII console app
+- Monitor progress regularly with a terminal/console application
 
 # Game Workflows
 

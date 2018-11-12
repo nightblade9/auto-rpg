@@ -1,5 +1,6 @@
 node_modules
 .suo
+.vs
 sqlite3
 bin
 obj
