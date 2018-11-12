@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRpg.DatabaseMediator", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{9C884380-11D1-480C-B88C-3A8E99BB0E68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRpg.Web", "AutoRpg.Web\AutoRpg.Web.csproj", "{67B17D4B-BCC7-462E-877E-FB4431D8376E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRpg.Web", "AutoRpg.Web\AutoRpg.Web.csproj", "{67B17D4B-BCC7-462E-877E-FB4431D8376E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26A1E399-F1D9-4D8B-933F-E1CDC8CC9835}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
