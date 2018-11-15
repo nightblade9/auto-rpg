@@ -37,7 +37,9 @@ namespace AutoRpg.Web
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext>().AddUserManager<UserManager<IdentityUser>>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);                        
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            this.ConfigureDepdendencyInjection(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,6 +63,11 @@ namespace AutoRpg.Web
             app.UseAuthentication();
 
             app.UseMvc();
+        }
+
+        private void ConfigureDepdendencyInjection(IServiceCollection services)
+        {
+            services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
         }
     }
 }

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>AutoRpg.Services.PartyManagementService</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\AutoRpg.DatabaseMediator\AutoRpg.DatabaseMediator.csproj" />
+    <ProjectReference Include="..\..\ServiceExtensions\AutoRpg.ServiceExtensions.csproj" />
+  </ItemGroup>
+
+</Project>

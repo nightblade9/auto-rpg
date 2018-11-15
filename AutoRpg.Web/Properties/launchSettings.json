@@ -2,6 +2,10 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/AutoRpg.Web",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:50000",
       "sslPort": 0
@@ -17,8 +21,9 @@
       }
     },
     "AutoRpg.Web": {
-      "commandName": "Project",
+      "commandName": "IISExpress",
       "launchBrowser": true,
+      "launchUrl": "http://localhost/AutoRpg.Web",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
